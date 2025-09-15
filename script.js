@@ -75,4 +75,73 @@ div.textContent = "Hello World!";
             //Adding HTML content
 div.innerHTML = "<span>Hello World!</span>"       
 
+const content = document.createElement("div");
+content.classList.add("content");
+content.textContent = "This is the glorious text-content";
 
+container.appendChild(content);
+
+const para = document.createElement("p");
+para.style.color = "red";
+para.textContent = "Hey, I'm red";
+container.appendChild(para);
+
+const h3 = document.createElement("h3");
+h3.textContent = "I'm a blue H3";
+h3.style.color = "blue";
+container.appendChild(h3);
+
+const myDiv = document.createElement("div");
+myDiv.style["border: black; background-color: pink"];
+container.appendChild(myDiv);
+
+const h1 = document.createElement("h1");
+h1.textContent = "I'm in a div";
+myDiv.appendChild(h1);
+
+const secondPara = document.createElement("p");
+secondPara.textContent = "ME TOO";
+myDiv.appendChild(secondPara);
+
+const btn = document.querySelector("#btn");
+console.log(btn)
+
+btn.onclick = () => alert("Hello world");
+
+const myBtn = document.querySelector("#myBtn");
+
+myBtn.addEventListener("click", () => {
+    alert("Hello world");
+})
+
+const anotherBtn = document.querySelector("#anotherBtn");
+
+function consoleFunction () {
+  console.log("Yay! You did it!")
+}
+
+anotherBtn.onclick = consoleFunction;
+
+const anotherBtnStill = document.querySelector("#anotherBtnStill");
+
+anotherBtnStill.addEventListener("click", function(e){
+  e.target.style.background = "blue";
+})
+
+const buttons = document.querySelectorAll("button");
+
+//we use forEach method to iterate through each button
+buttons.forEach((button) => {
+  button.addEventListener("click", () => {
+    console.log(button.id);
+  });
+});
+
+//To prevent the default behaviour of ana event, you use the preventDefault() method.
+let link = document.querySelector("a");
+
+link.addEventListener("click",function(e){
+  //instead of the link taking you to the webpage it logs "clicked" in the console
+  console.log("clicked");
+  e.preventDefault()
+});

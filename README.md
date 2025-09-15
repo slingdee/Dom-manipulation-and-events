@@ -1,1 +1,4 @@
-The DOM (or Document Object Model) is a tree-like representation of the contents of a webpage - a tree of “nodes” with different relationships depending on how they’re arranged in the HTML document
+The DOM (or Document Object Model) is a tree-like representation of the contents of a webpage - a tree of “nodes” with different relationships depending on how they’re arranged in the HTML document.
+An event is an action occured in the web browser eg mouse click. Event flow has two main models: bubbling and capturing. Use addEventListener() to register an event that connects an event to an event listener.The event object is accessible only within the event listener. Use event.preventDefault() method to prevent the default behaviour of an event, but does not stop the event flow.
+There are several mouse events. They include: mousedown, mouseup, click, dbclick, mousemove, mouseover, mouseout, mouseenter, mouseleave and wheel()
+Keyboard events typically fire on the textbox and they include: keydown, keyup and keypress for eg when you press a, b, c or d.
